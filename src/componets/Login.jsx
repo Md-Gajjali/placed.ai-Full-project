@@ -21,15 +21,18 @@ const Login = () => {
   // }`
 
   const[email,setEmail] = useState("")
+  const[emailError,setEmailError] =useState("")
   const[password, setPassword] = useState("")
   const[cng,setCng]=useState(false)
 
 
   const handleClick = (e) => {
     e.preventDefault()
-    console.log(email);
-    console.log(password);
-    
+    if (email == "") {
+      setEmailError("please input vaild email")
+    } else {
+      setEmailError("good")
+    }
   }
 
 
@@ -48,9 +51,9 @@ const Login = () => {
               <div className="mb-5">
                 <label htmlFor="email-alternative" className="block mb-2.5 text-sm font-medium text-heading">Your email</label>
                 <input type="email" id="email-alternative" className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow placeholder:text-body" placeholder="name@flowbite.com"   onChange={(e)=>setEmail(e.target.value)}/>
+                <p className='text-red-600 h-[26px] mb-0 mt-3.5 w-[306px] '>{emailError}</p>
               </div>
-
-              <div className="mb-5">
+              <div className="mb-5 mt-[-10px] ">
                 <label htmlFor="password-alternative" className="block mb-2.5 text-sm font-medium text-heading">Your password</label>
                 {
                   cng ?
