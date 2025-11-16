@@ -26,10 +26,13 @@ const HeroSection = () => {
             </div>
             <div className="py-[12px] w-[1046px] m-auto h-[184px] text-center">
               <h1 className="text-[90px] font-bold px-[120px] text-3xl">
-                AI Career 
+                <span className='text-[90px]'>
+                  AI Career 
+                </span>
+                
                 <span class="relative inline-block">
-                    <span class="absolute inset-0 rounded-md bg-gradient-to-r from-[#4928FE] to-[#5340FE]/0 -rotate-180 opacity-30 p-2 md:p-6 -z-10"></span>
-                    <span className='mr-3 px-3'>Platform </span>
+                    <span class="absolute text-[90px] inset-0 rounded-md bg-gradient-to-r from-[#4928FE] to-[#5340FE]/0 -rotate-180 opacity-30 p-2 md:p-6 -z-10"></span>
+                    <span className='mr-3 px-3 text-[90px]'>Platform </span>
                 </span>
               </h1>
               <h1 className='text-[90px] font-bold mt-[-25px] ml-[-25 px]'>For Job Seekers</h1>
