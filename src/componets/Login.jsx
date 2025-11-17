@@ -41,7 +41,7 @@ const Login = () => {
     } else if (password == "") {
       setPassError("Invalid Password!")
     } else if (!PasswRegex.test(password)) {
-      setPassError("Is Strong Password")
+      setPassError("Strong Password Plz")
     } else{
       setEmailError("good")
       setPassError("good")
